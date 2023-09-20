@@ -8,10 +8,11 @@
     padding-bottom: 9px;
     display: flex;
     align-items: flex-end;
-
+    background-color: $base-black;
 }
 
-.container {
+.header-container {
+    max-width: 694px;
     display: flex;
     align-items: center;
     justify-content: space-between;

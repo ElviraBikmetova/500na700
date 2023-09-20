@@ -1,0 +1,38 @@
+
+
+.news {
+    padding: 50px 0 109px;
+}
+
+.news__title {
+    margin-bottom: 30px;
+}
+
+.news-block {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 50px;
+}
+
+.news-block__item {
+    max-width: 400px;
+    max-height: 370px;
+}
+
+.news-block__img {
+    width: 400px;
+    height: 264px;
+    margin-bottom: 30px;
+    img {
+        object-fit: cover;
+    }
+}
+
+.news-block__title {
+    margin-bottom: 10px;
+}
+
+.news-block__description {
+    font-size: 14px;
+}

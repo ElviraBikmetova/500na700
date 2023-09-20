@@ -1,0 +1,18 @@
+mixin faq-block-item(title, ...paragraphs)
+    .faq-block__item
+        .faq-block__header
+            .faq-block__line
+            h3.faq-block__title= title
+        .faq-block__body
+            each paragraph in paragraphs
+                p.faq-block__paragraph= paragraph
+
+section.faq
+    .container.faq-container
+        h2 FAQ
+        .faq-block
+            +faq-block-item('Как добраться до музея?', 'В Национальный музей Республики Татарстан можно добраться общественным транспортом:', '1) «Станция метро «Кремлевская», а затем по направлению к Кремлю пройдя 5 минут пешком;')
+            +faq-block-item('Есть ли поблизости удобная парковка?', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem tempora expedita dicta sint esse placeat laboriosam incidunt veritatis numquam repellendus.')
+            +faq-block-item('Можно ли воспользоваться аудиогидом?', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem tempora expedita dicta sint esse placeat laboriosam incidunt veritatis numquam repellendus.')
+            .faq-block__line
+

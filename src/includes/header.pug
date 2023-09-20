@@ -5,9 +5,8 @@ mixin header-nav(...items)
 
 header.header
     .container
-        .header__logo
-            img(src=require("./images/logo.svg"), alt="Логотип")
-        nav.header__nav
-            +header-nav('Пункт 1', 'Пункт 2', 'Пункт 3', 'Пункт 4', 'Пункт 5')
-        div
-        div
+        .header-container
+            .header__logo
+                img(src=require("./images/logo.svg"), alt="Логотип")
+            nav.header__nav
+                +header-nav('Пункт 1', 'Пункт 2', 'Пункт 3', 'Пункт 4', 'Пункт 5')

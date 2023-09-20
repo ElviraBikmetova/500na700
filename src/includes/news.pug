@@ -1,0 +1,18 @@
+mixin news-item(img, title, description)
+    .news-block__item
+        .news-block__img
+            img(src=require(`./images/${img}`), alt='Изображение новости')
+        p.news-block__title= title
+        p.news-block__description= description
+
+
+section.news
+    .container
+        h2.news__title Новости
+        .news-block
+            +news-item('news1.jpg', 'Заголовок', 'ОписаниОписание Описание  Описание Описание Описание  Описаниее')
+            +news-item('news2.jpg', 'Заголовок', 'ОписаниОписание Описание  Описание Описание Описание  Описаниее')
+            +news-item('news3.jpg', 'Заголовок', 'ОписаниОписание Описание  Описание Описание Описание  Описаниее')
+            +news-item('news4.jpg', 'Заголовок', 'ОписаниОписание Описание  Описание Описание Описание  Описаниее')
+            +news-item('news5.jpg', 'Заголовок', 'ОписаниОписание Описание  Описание Описание Описание  Описаниее')
+            +news-item('news6.jpg', 'Заголовок', 'ОписаниОписание Описание  Описание Описание Описание  Описаниее')

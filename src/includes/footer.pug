@@ -1,0 +1,14 @@
+mixin social-media(...items)
+        each item in items
+            img(src=require(`./images/${item}.svg`), alt=`${item}`)
+
+footer.footer
+    .container
+        .footer-container
+            .footer-left
+                p.footer-left__title Заголовок
+                p.footer-left__text ОписаниОписание Описание  Описание Описание Описание  Описаниее
+                a.footer-left__link(href='https://500na700.ru/') 500na700.ru
+            .footer-right
+                +social-media('vk', 'facebook', 'tiktok', 'youtube')
+
