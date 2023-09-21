@@ -1,12 +1,21 @@
-mixin header-nav(...items)
-    ul
-        each item in items
-            li= item
+mixin header-nav(item, ...subitems)
+    li
+        .header-nav__item= item
+            //- .header-nav__line
+        .header-nav__subitems
+            each subitem in subitems
+                a= subitem
 
 header.header
     .container
         .header-container
             .header__logo
                 img(src=require("./images/logo.svg"), alt="Логотип")
-            nav.header__nav
-                +header-nav('Пункт 1', 'Пункт 2', 'Пункт 3', 'Пункт 4', 'Пункт 5')
+            nav.header-nav
+                ul.header-nav__items
+                    +header-nav('Пункт 1', 'Подпункт меню1', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню')
+                    +header-nav('Пункт 2', 'Подпункт меню2', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню')
+                    +header-nav('Пункт 3', 'Подпункт меню3', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню')
+                    +header-nav('Пункт 4', 'Подпункт меню4', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню')
+                    +header-nav('Пункт 5', 'Подпункт меню5', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню')
+

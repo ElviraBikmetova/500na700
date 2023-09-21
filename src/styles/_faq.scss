@@ -19,7 +19,8 @@
     padding-bottom: 30px;
     cursor: pointer;
     &:hover {
-        background-color: $base-gray;
+        // background-color: $base-gray;
+
         .faq-block__line {
             background: #fff;
         }
