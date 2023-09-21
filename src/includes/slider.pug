@@ -1,5 +1,20 @@
+mixin slide(img, num, title, ...description)
+    .slider-block__item
+        img(src=require(`./images/${img}`), alt=`Изображение слайда №${num}`)
+        .slider-block__text
+            h2.slider-block__title= title
+            .slider-block__description= description
+
 section.slider
     .slider-block
-        div slide 1
-        div slide 2
-        div slide 3
+        +slide('slide1.jpg', '1', 'Слайд 1', 'Средне вековая история ТатарстанаСредне вековая история Та тарстанаСре дневековая история ТатарстанаСредневеков ая ')
+        +slide('slide2.jpg', '2', 'Слайд 2', '')
+        +slide('slide3.jpg', '3', 'Слайд 3', 'Прозвучат произведения Иоганна Себастьяна Баха, Поля Жанжана, Фрэнка Корделла, Андре Вайнена, Ефрема Подгайца')
+    .slider-controls
+        .slider-controls__prev
+            img(src=require('./images/Arrow-prev.svg'), alt='Стрелка налево')
+        .slider-controls__next
+            img(src=require('./images/Arrow-next.svg'), alt='Стрелка направо')
+
+
+
