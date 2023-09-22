@@ -3,10 +3,12 @@
 }
 
 .slider-block__item {
-    width: 1240px;
-    height: 650px;
+    // width: 1240px;
+    // height: 650px;
     position: relative;
     img {
+        width: 1240px;
+        height: 650px;
         object-fit: cover;
     }
 }
@@ -36,4 +38,13 @@
 
 .slider-controls__prev, .slider-controls__next {
     cursor: pointer;
+}
+
+@media (max-width: 320px) {
+    .slider-block__item {
+        img {
+            width: 290px;
+            height: 450px;
+        }
+    }
 }

@@ -1,8 +1,7 @@
 import { tns } from "../../node_modules/tiny-slider/src/tiny-slider"
 
 function slider() {
-    // console.log('object')
-    var slider = tns({
+    const slider = tns({
         container: '.slider-block',
         items: 2,
         slideBy: 'page',
@@ -16,9 +15,19 @@ function slider() {
         startIndex: 1,
         fixedWidth: 1240,
         controlsPosition: "bottom",
-        controlsContainer: '.slider-controls'
+        controlsContainer: '.slider-controls',
+        responsive: {
+          0: {
+            fixedWidth: 290,
+            items: 1,
+            // slideBy: 1
+            // center: false
+          },
+          321: {
+            fixedWidth: 1240
+          }
+        }
       });
-    // console.log('object')
 }
 
 export default slider

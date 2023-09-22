@@ -2,9 +2,9 @@ mixin header-nav(item, ...subitems)
     li
         .header-nav__item= item
             //- .header-nav__line
-        .header-nav__subitems
-            each subitem in subitems
-                a= subitem
+            .header-nav__subitems
+                each subitem in subitems
+                    a= subitem
 
 header.header
     .container

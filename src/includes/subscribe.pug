@@ -5,9 +5,11 @@ section.subscribe
             h2.subscribe__title Подпишись
             p.subscribe__subtitle Отправляем анонсы новых статей, выпусков и трансляций
             form.subscribe-form
-                input(type="email", name="email" placeholder='Email')
-                input(type="date", name="date" placeholder='')
-                input(type="tel", name="tel" placeholder='Телефон')
-                input(type="time", name="time" placeholder='')
-                input(type="button", value="Подписаться")
+                div.subscribe-form__block
+                    input.email(type="email", name="email" placeholder='Email' required)
+                    input.tel(type="tel" name="tel" placeholder='Телефон' required)
+                div.subscribe-form__block
+                    input.date(type="date", name="date" placeholder='')
+                    input.time(type="time", name="time" placeholder='')
+                input(type="submit", value="Подписаться")
 
