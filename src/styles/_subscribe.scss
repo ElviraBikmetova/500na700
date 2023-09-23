@@ -45,6 +45,11 @@
             background-color: #fff;
             font-size: 16px;
             line-height: 125%;
+            &:hover {
+                cursor: pointer;
+                background-color: $base-green;
+                border: none;
+            }
         }
     }
 }

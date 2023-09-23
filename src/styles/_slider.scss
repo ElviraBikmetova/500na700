@@ -1,15 +1,16 @@
+@import 'variables';
+
 .slider {
     padding: 212px 0 75px;
 }
 
 .slider-block__item {
-    // width: 1240px;
-    // height: 650px;
     position: relative;
     img {
         width: 1240px;
         height: 650px;
         object-fit: cover;
+        border-radius: 6px;
     }
 }
 
@@ -37,7 +38,12 @@
 }
 
 .slider-controls__prev, .slider-controls__next {
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+        path {
+            fill: $base-green;
+        }
+    }
 }
 
 @media (max-width: 320px) {
@@ -46,5 +52,9 @@
             width: 290px;
             height: 450px;
         }
+    }
+    .slider-block__text {
+        top: 40%;
+        max-width: 270px;
     }
 }

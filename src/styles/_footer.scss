@@ -26,11 +26,27 @@
     margin-bottom: 25px;
 }
 
+.footer-left__link {
+    &:hover {
+        color: $base-green;
+    }
+}
+
 .footer-right {
     display: flex;
     column-gap: 30px;
     img {
         width: 28px;
         height: 28px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .footer-right {
+        justify-content: center;
+        width: 100%;
     }
 }

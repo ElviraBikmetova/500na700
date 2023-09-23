@@ -1,7 +1,6 @@
 mixin header-nav(item, ...subitems)
     li
         .header-nav__item= item
-            //- .header-nav__line
             .header-nav__subitems
                 each subitem in subitems
                     a= subitem
@@ -11,6 +10,8 @@ header.header
         .header-container
             .header__logo
                 img(src=require("./images/logo.svg"), alt="Логотип")
+            .header__burger
+                span
             nav.header-nav
                 ul.header-nav__items
                     +header-nav('Пункт 1', 'Подпункт меню1', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню', 'Подпункт меню')

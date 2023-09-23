@@ -21,10 +21,10 @@
 }
 
 .news-block__img {
-    width: 400px;
-    height: 264px;
     margin-bottom: 30px;
     img {
+        width: 400px;
+        height: 264px;
         object-fit: cover;
     }
 }
@@ -35,4 +35,22 @@
 
 .news-block__description {
     font-size: 14px;
+}
+
+@media (max-width: 320px) {
+    .news-block {
+        display: block;
+    }
+    .news-block__item {
+        max-width: 200px;
+        max-height: 412px;
+        margin-right: 20px;
+    }
+    .news-block__img {
+        img {
+            width: 200px;
+            height: 264px;
+        }
+    }
+
 }
