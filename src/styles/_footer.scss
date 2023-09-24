@@ -35,11 +35,11 @@
 .footer-right {
     display: flex;
     column-gap: 30px;
-    img {
-        width: 28px;
-        height: 28px;
+    svg {
         &:hover {
-            cursor: pointer;
+            path {
+                fill: $base-green;
+            }
         }
     }
 }

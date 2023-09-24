@@ -4,7 +4,7 @@ function slider() {
   const slider = tns({
     container: '.slider-block',
     slideBy: 'page',
-    autoplay: false, // поменять на true
+    autoplay: true,
     controls: true,
     mouseDrag: true,
     autoplayButtonOutput: false,
@@ -31,17 +31,12 @@ function slider() {
     responsive: {
       0: {
         fixedWidth: 200,
-        // items: 2.2,
-        // slideBy: 'page',
-        autoplay: false, // поменять на true
+        autoplay: true,
         controls: false,
         mouseDrag: true,
         autoplayButtonOutput: false,
         nav: false,
-        // gutter: 20,
-        // center: true,
         startIndex: 1,
-        // slideBy: 0.5
       },
       321: {
         disable: true

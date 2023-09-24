@@ -20,8 +20,6 @@
     padding-bottom: 30px;
     cursor: pointer;
     &:hover {
-        // background-color: $base-gray;
-
         .faq-block__line {
             background: #fff;
         }
@@ -37,7 +35,8 @@
 }
 
 .faq-block__title {
-    font-family: 'M PLUS 1', sans-serif;    font-size: 24px;
+    font-family: 'M PLUS 1', sans-serif;
+    font-size: 24px;
     line-height: 145.833%;
     font-weight: 400;
 }

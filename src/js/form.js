@@ -6,11 +6,15 @@ function form() {
     const date = form.querySelector('.date')
     const time = form.querySelector('.time')
     date.valueAsDate = new Date()
+    let currentTime
 
-    setInterval(() => {
-        let currentTime = new Date().toLocaleTimeString().slice(0,-3)
+    const setCurrentTime = () => {
+        currentTime = new Date().toLocaleTimeString().slice(0,-3)
         time.value = currentTime
-    }, 1000)
+    }
+    setCurrentTime()
+
+    setInterval(setCurrentTime, 1000)
 }
 
 export default form
