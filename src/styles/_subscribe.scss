@@ -34,10 +34,12 @@
         font-weight: 400;
         line-height: 142.857%;
         color: rgba(0, 0, 0, 0.60);
+        background-color: #fff;
+        justify-content: start;
         &[type=submit] {
             max-width: 141px;
             padding: 14px 20px 16px;
-            background-color: #fff;
+            color: $base-black;
             font-size: 16px;
             line-height: 125%;
             &:hover {
@@ -47,6 +49,8 @@
             }
         }
         &[type=date], &[type=time] {
+            -webkit-appearance: none;
+            appearance: none;
             &::-webkit-calendar-picker-indicator {
                 opacity: 0;
             }
@@ -63,4 +67,15 @@
     gap: 20px;
     max-width: 400px;
     width: 100%;
+}
+
+.subscribe-form__btn {
+    max-width: 400px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .subscribe {
+        padding: 30px 0 50px;
+    }
 }

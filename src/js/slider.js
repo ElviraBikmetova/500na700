@@ -14,31 +14,34 @@ function slider() {
     startIndex: 1,
     controlsPosition: "bottom",
     controlsContainer: '.slider-controls',
+    autoWidth: true,
     responsive: {
       0: {
-        fixedWidth: 290,
-        items: 1,
+        edgePadding: 15
       },
-      321: {
-        items: 2,
-        fixedWidth: 1240
+      1281: {
+        edgePadding: 0
       }
     }
   })
 
   const sliderNews = tns({
     container: '.news-block',
+    autoplay: true,
+    controls: false,
+    mouseDrag: true,
+    autoplayButtonOutput: false,
+    nav: false,
     responsive: {
       0: {
         fixedWidth: 200,
-        autoplay: true,
-        controls: false,
-        mouseDrag: true,
-        autoplayButtonOutput: false,
-        nav: false,
         startIndex: 1,
       },
       321: {
+        fixedWidth: 400,
+        startIndex: 0,
+      },
+      768: {
         disable: true
       }
     }
@@ -47,3 +50,7 @@ function slider() {
 }
 
 export default slider
+
+
+
+

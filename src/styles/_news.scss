@@ -36,14 +36,22 @@
     font-size: 14px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
+    .news {
+        padding: 40px 0 80px;
+    }
     .news-block {
         display: block;
     }
     .news-block__item {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .news-block__item {
         max-width: 200px;
         max-height: 412px;
-        margin-right: 20px;
     }
     .news-block__img {
         img {
@@ -51,5 +59,4 @@
             height: 264px;
         }
     }
-
 }

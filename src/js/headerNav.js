@@ -8,18 +8,25 @@ function headerNav() {
     const headerNav = headerNavWrapper.querySelector('.header-nav')
     const items = headerNavWrapper.querySelectorAll('.header-nav__item')
     let activeItem
+    let openMenuBurger = false
 
     function setMenuBurger() {
         headerBurger.addEventListener('click', e => {
             headerBurger.classList.toggle('active')
             headerNavWrapper.classList.toggle('active')
             headerNav.classList.toggle('active')
-            body.classList.toggle('lock')
 
             activeItem = headerNavWrapper.querySelector('.active-item')
                 if (activeItem) {
                     activeItem.classList.remove('active-item')
                 }
+
+            openMenuBurger = !openMenuBurger
+            if (openMenuBurger) {
+                bodyLock()
+            } else {
+                bodyUnLock()
+            }
         })
     }
 
@@ -84,9 +91,12 @@ function headerNav() {
         body.classList.remove('lock')
     }
 
+    if (document.documentElement.clientWidth > 767) {
+        underlineMenuItem()
+        lockPageScroll()
+    }
+
     setMenuBurger()
-    underlineMenuItem()
-    lockPageScroll()
     setActiveItem()
 }
 

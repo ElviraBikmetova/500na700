@@ -74,6 +74,7 @@ body {
 .header-nav__item {
     padding: 20px 0;
     border-bottom: 3px solid transparent;
+    white-space: nowrap;
     &:hover {
         cursor: pointer;
         color: $base-green;
@@ -115,10 +116,13 @@ body {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px), (max-height: 500px) {
     .header {
         height: 95px;
         padding-bottom: 10px;
+    }
+    .header-container {
+        max-width: 100%;
     }
     .header__burger {
         display: block;
@@ -194,7 +198,8 @@ body {
         flex-direction: column;
         row-gap: 40px;
         padding-left: 50px;
-        overflow: auto;
+        height: 100%;
+        overflow-y: auto;
         li {
             &:hover, &:active, &:focus-within {
                 .header-nav__subitems {
